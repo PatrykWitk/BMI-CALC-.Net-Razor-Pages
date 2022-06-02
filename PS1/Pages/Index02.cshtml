@@ -1,0 +1,51 @@
+﻿@page
+@model Index02Model
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href=~/Style1.css rel="stylesheet" type="text/css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+
+<body>
+    <a>Wprowadz swoje dane.</a>
+
+    <form action="" method="post">
+        <label asp-for="person.FirstName"></label>
+        <input asp-for="person.FirstName" value="" />
+        <span asp-validation-for="person.FirstName" class="text-warning"></span>
+        <br /><br />
+
+
+        <label asp-for="person.height"></label>
+        <input asp-for="person.height" value="" />
+        <span asp-validation-for="person.height" class="text-warning"></span>
+        <br /><br />
+
+        <label asp-for="person.unit"></label>
+        <select asp-for="person.unit">
+            <option string="Metr">Metr</option>
+            <option string="Centymetr">Centymetr</option>
+        </select>
+        <br /><br />
+
+        <label asp-for="person.weigh"></label>
+        <input asp-for="person.weigh" value="" />
+        <span asp-validation-for="person.weigh" class="text-warning"></span>
+        <br /><br />
+
+        <label asp-for="person.yo"></label>
+        <input asp-for="person.yo" />
+        <span asp-validation-for="person.yo" class="text-warning"></span>
+        <br /><br />
+
+
+        <input type="submit" name="" value="Zatwierdz" />
+    </form>
+
+</body>
+</html>

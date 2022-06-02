@@ -1,0 +1,88 @@
+﻿@page
+@model BMI_CALC.Pages.WelcomeModel
+@{ 
+    float bmi=0;
+    if (Model.unit == "Metr")
+    {
+        bmi = Model.weigh / ((Model.height) * (Model.height));
+    }
+    else if (Model.unit == "Centymetr")
+    {
+        bmi = Model.weigh / ((Model.height)/100* (Model.height)/100);
+    }
+
+    string kolor = "zielony";
+    string tekst = "zaden";
+    if (bmi < 18.5)
+    {
+        kolor = "niebieski";
+        tekst = "Niedowaga";
+    }
+    if (18.5 <= bmi && bmi < 24.9)
+    {
+        kolor = "zielony";
+        tekst = "Waga idealna";
+    }
+    if (24.9 <= bmi && bmi < 29.9)
+    {
+        kolor = "zolty";
+        tekst = "Nadwaga";
+    }
+    if (30 <= bmi && bmi < 34.9)
+    {
+        kolor = "pomaranczowy";
+        tekst = "Otyłość";
+    }
+    if (34.9 <= bmi)
+    {
+        kolor = "czerwony";
+        tekst = "Otyłość skrajna";
+    }
+
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href=~/Style2.css rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+
+
+
+
+        <div> 
+            <div class="@kolor">
+                Twoje BMI to: @bmi
+                <br />
+                @tekst
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Podane dane:</h2>
+    <div1>Imie: @Model.firstName</div1>
+    <br />
+    <div1>Wiek: @Model.yo</div1>
+    <br />
+    <div1>Wzrost: @Model.height</div1>
+    <br />
+    <div1>Wybrana miara: @Model.unit</div1>
+    <br />
+    <div1>Waga w kg: @Model.weigh</div1>
+</body>
+</html>

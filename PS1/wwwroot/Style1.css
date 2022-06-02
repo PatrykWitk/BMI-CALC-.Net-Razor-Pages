@@ -1,0 +1,21 @@
+﻿body {
+    background-color: rosybrown;
+}
+
+html {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+a {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 47px;
+    font-weight: bold;
+}
+ 
+.text-warning{
+    color: red;
+}

@@ -1,0 +1,40 @@
+﻿body {
+    background-color: rosybrown;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: fantasy;
+}
+
+div {
+    text-align: center;
+    font-size: 50px;
+    font-family: fantasy;
+}
+
+div1 {
+    font-size: 30px;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+.czerwony{
+    color: red;
+}
+
+.niebieski {
+    color: blue;
+}
+
+.zielony {
+    color:green;
+}
+
+.zolty {
+    color: yellow;
+}
+
+.pomaranczowy {
+    color: darkorange;
+}
